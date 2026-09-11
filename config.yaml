@@ -1,0 +1,56 @@
+# Startup Discovery Configuration
+
+countries:
+  - japan
+  - south_korea
+
+industries:
+  - ai
+  - saas
+  - fintech
+  - biotech
+  - blockchain
+  - deeptech
+  - edtech
+  - logistics
+
+funding_stages:
+  - seed
+  - series_a
+  - series_b
+  - series_c
+  - series_d
+
+market_focus: global
+results_limit: 20
+
+# API Configuration
+apis:
+  open_unicorn:
+    enabled: true
+    url: "https://api.openunicorn.com"
+    rate_limit: 100
+  
+  opencorporates:
+    enabled: true
+    url: "https://api.opencorporates.com/v0.4"
+    rate_limit: 50
+  
+  github:
+    enabled: true
+    url: "https://api.github.com"
+    rate_limit: 60
+
+# Scraping Configuration
+scraping:
+  enabled: true
+  rate_limit_delay: 2
+  user_agent: "Mozilla/5.0 (compatible; StartupDiscoveryBot/1.0)"
+  timeout: 10
+
+# Output Configuration
+output:
+  format: json
+  save_results: true
+  results_directory: "results"
+  timestamp_format: "%Y-%m-%d_%H-%M-%S"
